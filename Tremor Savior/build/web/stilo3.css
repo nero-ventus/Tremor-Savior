@@ -1,0 +1,19 @@
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+
+body{
+background: url(imagenes/earth1.jpg) no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}

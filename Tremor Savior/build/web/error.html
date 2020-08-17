@@ -1,0 +1,71 @@
+﻿
+<html>
+    <head>
+        <title>Angel-Error Desconocido</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="imagenes/icono.png" />
+
+        <link rel="shortcut icon" href="favicon.ico"> 
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link rel="stylesheet" href="css/materialize.min.css" media="screen,projection">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+
+        <style>
+            body{
+                background: url(imagenes/fondoerror.png) no-repeat center center fixed;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;      
+                background-size: cover;
+            } 
+        </style>
+        <script language="JavaScript">
+
+            /* Determinamos el tiempo total en segundos */
+            var totalTiempo = 10;
+
+
+            function updateReloj()
+            {
+                document.getElementById('CuentaAtras').innerHTML = "Regresando a su página en " + totalTiempo + " segundos";
+
+                if (totalTiempo === 0)
+                {
+                    window.location = window.history.back();
+                } else {
+                    /* Restamos un segundo al tiempo restante */
+                    totalTiempo -= 1;
+                    /* Ejecutamos nuevamente la función al pasar 1000 milisegundos (1 segundo) */
+                    setTimeout("updateReloj()", 1000);
+                }
+            }
+
+            window.onload = updateReloj;
+
+        </script>
+    </head>
+
+
+    <body>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+        <script>
+            $(document).ready(function () {
+
+            });
+        </script>
+        <div class="row" style="text-align: center">
+            <div class="col s12 white " style="text-align: center; opacity: .7 ; margin-top: 2em;    ">
+                <div class="col s12" style="text-align: center"><h2> Uy... ¡Parece que encontramos un error desconocido!</h2> </div> 
+                <div class="col s4 offset-s4 " style="text-align: center"><img class="responsive-img " src="imagenes/errorimg.png"></div>
+                <div class="col s12" style="text-align: center"><h4 id='CuentaAtras'></h4></div>
+            </div>
+        </div>
+    </body>
+</html>
