@@ -12,3 +12,6 @@ Set your trusted contacts who will recive your emergency information in case of 
 In case of an earthquake if you want you can send your emergency information to your trusted friends or if you do not answer in a certain time the app will send it for prevention
 
 <img src="tremor_imgs/options.png" width="400" height="auto"/> <img src="tremor_imgs/mail.png" width="400" height="auto"/>
+
+## Notes
+Made from 10/2018 to 11/2018
